@@ -45,3 +45,9 @@ class Solution(object):
             if _num in data:
                 return [data[_num], i]
             data[v] = i
+
+
+if __name__ == '__main__':
+    nums = [3, 3]
+    target = 6
+    Solution().twoSum(nums, target)

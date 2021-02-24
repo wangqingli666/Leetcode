@@ -32,6 +32,8 @@
 """
 思路: 实现栈
 """
+
+
 class MinStack(object):
 
     def __init__(self):
@@ -66,3 +68,11 @@ class MinStack(object):
         _list = self.record
         num = sorted(_list)[0]
         return num
+
+
+if __name__ == '__main__':
+    action = MinStack()
+    action.push(-2)
+    action.push(0)
+    action.push(-3)
+    action.pop()

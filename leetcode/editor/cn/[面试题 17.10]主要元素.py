@@ -32,3 +32,8 @@ class Solution(object):
             if nums.count(i) > len(nums) / 2:
                 return i
         return -1
+
+
+if __name__ == '__main__':
+    nums = [1, 2, 5, 9, 5, 9, 5, 5, 5]
+    Solution().majorityElement(nums)

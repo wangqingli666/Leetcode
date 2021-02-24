@@ -25,7 +25,7 @@
 1. 一次遍历获取到出现次数(count)、首次位置(right)、最后位置(left)
 2. 对count进行排序, 获取到出现次数最大值
 3. 遍历count与出现次数最大值相比较, 若相等则进行最短子数组长度计算
-4. min() 函数中right取值使用了get方法是考虑到列表长度为1的情况right为空字典, 对其设置默认值, 防止keyerror情况
+4. min() 函数中right取值使用了get方法是考虑到列表长度为1的情况right为空字典, 对其设置默认值, 防止key error情况
 """
 
 
@@ -49,3 +49,8 @@ class Solution(object):
         res = min(right.get(num, left[num]) - left[num] + 1 for num in count.keys() if count[num] == max_num)
 
         return res
+
+
+if __name__ == '__main__':
+    nums = [1, 2, 2, 3, 1]
+    Solution().findShortestSubArray(nums)
